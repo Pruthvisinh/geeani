@@ -37,7 +37,7 @@ gem 'omniauth-twitter'
 
 # Databases
 #gem 'pg', '0.19.0'
-gem 'bootstrap', '~> 4.0.0'
+gem 'bootstrap', '~> 4.3.1'
 gem 'autoprefixer-rails'
 gem 'jquery-rails'
 
