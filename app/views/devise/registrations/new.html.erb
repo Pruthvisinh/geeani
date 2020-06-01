@@ -1,29 +1,96 @@
-<h2>Sign up</h2>
+<section class="signup">
+  <div class="container">
+    <div class="signup-content">
+      <div class="signup-form">
+        <h2 class="form-title">Sign up</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), :class=> "register-form", id:"register-form") do |f| %>
+          <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+       <!--    <div class="form-group">
+            <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+            <input type="text" name="resource[name]" id="name" placeholder="Your Name" class="signin_input" />
+        </div> -->
+       <!--  <div class="form-group">
+            <label for="email"><i class="zmdi zmdi-email"></i></label>
+            <input type="email" name="resource[email]" id="email" placeholder="Your Email" class="signin_input" />
+        </div>
+        <div class="form-group">
+            <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+            <input type="password" name="resource[password]" id="pass" placeholder="Password" class="signin_input" />
+        </div>
+        <div class="form-group">
+            <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+            <input type="password" name="resource[password_confirmation]" id="re_pass" placeholder="Repeat your password" class="signin_input"/>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+            <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+        </div>
+        <div class="form-group form-button">
+            <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
+        </div> -->
+
+          <div class="field form-group">
+            <label for="email"><i class="zmdi zmdi-email"></i></label>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "signin_input" %>
+          </div>
+
+          <div class="field form-group">
+            <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+            <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> characters minimum)</em>
+            <% end %><br />
+            <%= f.password_field :password, autocomplete: "new-password", class: "signin_input" %>
+          </div>
+
+          <div class="field form-group">
+            <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "signin_input" %>
+          </div>
+
+          <div class="actions form-group  form-button">
+            <%= f.submit "Sign up", :class=>"form-submit" %>
+          </div>
+        <% end %> 
+
+        <%= render "devise/shared/links" %>
+        </div>
+          <div class="signup-image">
+            <figure><%= image_tag "signup-image.jpg", alt:"sign up image" %></figure>
+            <a href="#" class="signup-image-link">I am already member</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+</section> 
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+<style>
+  .signin_input{
+  width: 100% !important;
+  display: block !important;
+  border: none !important;
+  border-bottom: 1px solid #999 !important;
+  padding: 6px 30px !important;
+  font-family: Poppins !important;
+  box-sizing: border-box !important;
+  }
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+  .form-submit {
+    display: inline-block !important;
+    background: #6dabe4 !important;
+    color: #fff !important;
+    border-bottom: none !important;
+    width: auto !important;
+    padding: 15px 39px !important;
+    border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    -webkit-border-radius: 5px !important;
+    -o-border-radius: 5px !important;
+    -ms-border-radius: 5px !important;
+    margin-top: 25px !important;
+    cursor: pointer !important;
+}
+</style>
