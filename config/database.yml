@@ -25,6 +25,7 @@ production:
   database: geeani_production
   pool: 5
   timeout: 5000
-  host: herbelflax.herokuapp.com
+  #host: herbelflax.herokuapp.com https://geeani.herokuapp.com/
+  host: geeani.herokuapp.com
   username:  
   password:
