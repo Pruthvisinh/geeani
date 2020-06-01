@@ -20,12 +20,15 @@ test:
   username: param
   password: pruthvi123
 
+# production:
+#   adapter: postgresql
+#   database: geeani_production
+#   pool: 5
+#   timeout: 5000
+#   #host: herbelflax.herokuapp.com https://geeani.herokuapp.com/
+#   host: geeani.herokuapp.com
+#   username:  
+#   password:
+
 production:
-  adapter: postgresql
-  database: geeani_production
-  pool: 5
-  timeout: 5000
-  #host: herbelflax.herokuapp.com https://geeani.herokuapp.com/
-  host: geeani.herokuapp.com
-  username:  
-  password:
+ url: <%= ENV['DATABASE_URL'] %>
