@@ -40,13 +40,13 @@
 
             <% if devise_mapping.rememberable? %>
               <div class="form-group">
-                <%= f.check_box :remember_me, :class => "agree-term", class: "form-submit" %>
+                <%= f.check_box :remember_me, :class => "agree-term" %>
                 <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
               </div>
             <% end %>
 
             <div class="action form-group form-button">
-              <%= f.submit "Log in" %>
+              <%= f.submit "Log in", class: "form-submit" %>
             </div>
           <% end %>
 
@@ -82,12 +82,12 @@
     border-bottom: none !important;
     width: auto !important;
     padding: 15px 39px !important;
-    border-radius: 5px !important;
-    -moz-border-radius: 5px !important;
+    /*border-radius: 5px !important;*/
+    /*-moz-border-radius: 5px !important;*/
     -webkit-border-radius: 5px !important;
-    -o-border-radius: 5px !important;
-    -ms-border-radius: 5px !important;
-    margin-top: 25px !important;
+    /*-o-border-radius: 5px !important;
+    -ms-border-radius: 5px !important;*/
+   /* margin-top: 25px !important;*/
     cursor: pointer !important;
 }
 </style>

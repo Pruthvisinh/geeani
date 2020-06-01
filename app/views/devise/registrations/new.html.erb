@@ -54,11 +54,12 @@
           </div>
         <% end %> 
 
-        <%= render "devise/shared/links" %>
+        <%# render "devise/shared/links" %>
         </div>
           <div class="signup-image">
             <figure><%= image_tag "signup-image.jpg", alt:"sign up image" %></figure>
-            <a href="#" class="signup-image-link">I am already member</a>
+            <!-- <a href="#" class="signup-image-link">I am already member</a> -->
+            <%= link_to "I am already member", user_session_path, class: "signup-image-link" %>
           </div>
         </div>
       </div>
@@ -85,12 +86,12 @@
     border-bottom: none !important;
     width: auto !important;
     padding: 15px 39px !important;
-    border-radius: 5px !important;
-    -moz-border-radius: 5px !important;
+    /*border-radius: 5px !important;*/
+    /*-moz-border-radius: 5px !important;*/
     -webkit-border-radius: 5px !important;
-    -o-border-radius: 5px !important;
-    -ms-border-radius: 5px !important;
-    margin-top: 25px !important;
+    /*-o-border-radius: 5px !important;
+    -ms-border-radius: 5px !important;*/
+   /* margin-top: 25px !important;*/
     cursor: pointer !important;
 }
 </style>
