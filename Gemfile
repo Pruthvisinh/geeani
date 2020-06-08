@@ -42,7 +42,7 @@ gem 'activerecord-session_store', '~> 1.1', '>= 1.1.3'
 #gem 'omniauth-oauth2', '~> 1.6'
 # Databases
 #gem 'pg', '0.19.0'
-gem 'bootstrap', '~> 4.0.0'
+gem 'bootstrap', '~> 4.3.1'
 gem 'autoprefixer-rails'
 gem 'jquery-rails'
 
