@@ -31,10 +31,15 @@ gem "paperclip", "~> 6.0.0"
 
 gem 'owlcarousel-rails'
 
+#Social Media Login
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
-gem 'omniauth-twitter'
+#gem 'omniauth-twitter'
+gem 'omniauth', '~> 1.9', '>= 1.9.1'
+gem 'omniauth-github', '~> 1.4'
+gem 'activerecord-session_store', '~> 1.1', '>= 1.1.3'
 
+#gem 'omniauth-oauth2', '~> 1.6'
 # Databases
 #gem 'pg', '0.19.0'
 gem 'bootstrap', '~> 4.0.0'
